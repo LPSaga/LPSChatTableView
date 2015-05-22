@@ -61,6 +61,7 @@ static NSString *previousTime = nil;
         [result addObject:messageFrame];
     }
     return result;
+    
 }
 
 - (NSDictionary *)getDic
@@ -71,7 +72,7 @@ static NSString *previousTime = nil;
         [dictionary setObject:[UIImage imageNamed:@"Image_Loding.jpg"] forKey:@"picture"];
     }else{
         randomNum = LPSMessageTypeText;
-        [dictionary setObject:@"说点什么好呢" forKey:@"strContent"];
+        [dictionary setObject:@"这是一个向往和平的语录。" forKey:@"strContent"];
     }
     NSDate *date = [[NSDate date]dateByAddingTimeInterval:arc4random()%1000 ];
     [dictionary setObject:@(LPSMessageFromOther) forKey:@"from"];
